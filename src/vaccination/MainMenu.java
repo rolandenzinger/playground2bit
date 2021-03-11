@@ -7,17 +7,20 @@ public class MainMenu {
     public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int userInput = 0;
-        System.out.println("Geben Sie (1) für Standortverwalung ein.");
-        System.out.println("Geben Sie (2) ein um das Impf-Zeitfenster zu sehen.");
-        System.out.println("Geben Sie (3) für Terminvergabe ein.");
-        System.out.println("Geben Sie (4) für Personenverwaltung ein.");
-        System.out.println("Geben Sie (5) um mehr Über diese Applikation zu erfahren.");
-        System.out.println("Geben Sie (6) ein um das Prrogramm zu beenden");
-        userInput = Integer.parseInt(sc.nextLine());
-        MainMenu(userInput);
+        try {
+            int userInput = 0;
+            System.out.println("Geben Sie (1) für Standortverwalung ein.");
+            System.out.println("Geben Sie (2) ein um das Impf-Zeitfenster zu sehen.");
+            System.out.println("Geben Sie (3) für Terminvergabe ein.");
+            System.out.println("Geben Sie (4) für Personenverwaltung ein.");
+            System.out.println("Geben Sie (5) um mehr Über diese Applikation zu erfahren.");
+            System.out.println("Geben Sie (6) ein um das Prrogramm zu beenden");
+            userInput = Integer.parseInt(sc.nextLine());
+            MainMenu(userInput);
+        } catch (NumberFormatException e) {
+            System.out.println("Bitte geben Sie eine Zahl ein.");
+        }
     }
-
     public static void MainMenu(int input) {
 
 
