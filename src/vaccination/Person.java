@@ -14,7 +14,16 @@ public class Person {
 			person[i] = temp[i];
 		}
 		
-		person[temp.length][0] = firstName;
+		person[temp.length][0] = firstName + "";
+		person[temp.length][1] =lastName + "";
+		person[temp.length][2] = socialSecurityNumber + "";
+		person[temp.length][3] = street + "";
+		person[temp.length][4] = ZIP + "";
+		person[temp.length][5] = City + "";
+		person[temp.length][6] = Country + "";
+		person[temp.length][7] = Birthday + "";
+		person[temp.length][8] = Telephone + "";
+		
 		return 0;
 	}
 	
