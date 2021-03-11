@@ -10,6 +10,8 @@ public class MainMenu {
 		// TODO Auto-generated method stub
 		
 		System.out.println("Hello 2BIT");
+
+		System.out.println("Schaxleister");
 		
 		// put your code here
 
