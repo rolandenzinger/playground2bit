@@ -1,21 +1,25 @@
 package vaccination;
-
 public class MainMenu {
 
-	public MainMenu() {
-		// TODO Auto-generated constructor stub
-	}
+
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		System.out.println("Hello 2BIT");
-		
+		MainMenu();
+
 		// put your code here
 		//HI
 		//GitHubIstCursed
 		//urzi
 		//vezzi
+	}
+	public static void MainMenu(String input) {
+
+		switch (input) {
+			case
+		}
+
+
 	}
 
 }
