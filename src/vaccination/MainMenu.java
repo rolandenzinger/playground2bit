@@ -16,7 +16,7 @@ public class MainMenu {
 	public static void MainMenu(String input) {
 
 		switch (input) {
-			case
+			case "Standortverwaltung": Standortverwaltung();
 		}
 
 
