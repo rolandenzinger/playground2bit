@@ -34,6 +34,8 @@ public class MainMenu {
                 output("5: Über diese Applikation");
             case 6:
                 output("6: Beenden");
+			default:
+				output("Ungülltige eingabe");
 
         }
 
