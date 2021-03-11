@@ -1,11 +1,13 @@
 package vaccination;
 
 public class Person {
-	private static String[][] person = null;
+
+private static String[][] person = null;
+
 	
-	
-	//gibt die personID zurück
+	//gibt die personID zurÃ¼ck
 	public static int addNewPerson(String firstName, String lastName, int socialSecurityNumber, String street, int ZIP, String City, String Country, String Birthday, int Telephone) {
+
 		if (person == null) {
 			person = new String[1][10];
 			person[0][0] = firstName + "";
@@ -40,8 +42,9 @@ public class Person {
 		return person.length -1;
 	}
 	
-	//gibt false zurück, wenn das Löschen nicht erfolgreich war
+	//gibt false zurÃ¼ck, wenn das LÃ¶schen nicht erfolgreich war
 	public static boolean deletePerson(int personID) {
+
 //		
 //		if(person[personID][0].equals(personID + "")) {
 //			person[personID][0] = " ";
@@ -50,10 +53,11 @@ public class Person {
 //		}
 //		
 //		
+
 		return false;
 	}
 	
-	//gibt alle Personen in einem Array zurück
+	//gibt alle Personen in einem Array zurÃ¼ck
 	public static String[][] listAllPersons() {
 		return person;
 	}
