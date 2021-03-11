@@ -20,6 +20,7 @@ public class Person {
 	
 	//gibt false zurück, wenn das Löschen nicht erfolgreich war
 	public static boolean deletePerson(int personID) {
+		say
 		return false;
 	}
 	
