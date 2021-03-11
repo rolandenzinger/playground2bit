@@ -12,6 +12,7 @@ public class MainMenu {
 		System.out.println("Hello 2BIT");
 		
 		// put your code here
+		//HI
 
 	}
 
