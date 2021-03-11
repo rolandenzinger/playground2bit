@@ -42,15 +42,15 @@ public class Person {
 	
 	//gibt false zurück, wenn das Löschen nicht erfolgreich war
 	public static boolean deletePerson(int personID) {
-		
-		if(person[personID][0].equals(personID + "")) {
-			person[personID][0] = " ";
-		} else {
-			return false;
-		}
-		
-		
-		return true;
+//		
+//		if(person[personID][0].equals(personID + "")) {
+//			person[personID][0] = " ";
+//		} else {
+//			return false;
+//		}
+//		
+//		
+		return false;
 	}
 	
 	//gibt alle Personen in einem Array zurück
