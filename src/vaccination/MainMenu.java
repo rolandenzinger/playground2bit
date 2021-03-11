@@ -1,31 +1,47 @@
 package vaccination;
 
-import java.util.Locale;
+import java.util.Scanner;
 
 public class MainMenu {
 
+    public static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int userInput = 0;
+        System.out.println("Geben Sie (1) für Standortverwalung ein.");
+        System.out.println("Geben Sie (2) ein um das Impf-Zeitfenster zu sehen.");
+        System.out.println("Geben Sie (3) für Terminvergabe ein.");
+        System.out.println("Geben Sie (4) für Personenverwaltung ein.");
+        System.out.println("Geben Sie (5) um mehr Über diese Applikation zu erfahren.");
+        System.out.println("Geben Sie (6) ein um das Prrogramm zu beenden");
+        userInput = Integer.parseInt(sc.nextLine());
+        MainMenu(userInput);
+    }
+
+    public static void MainMenu(int input) {
 
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stu
+        switch (input) {
+            case 1:
+                output("1: Standortverwaltung");
+            case 2:
+                output("2: Imf-Zeitfenster");
+            case 3:
+                output("3: Terminvergabe");
+            case 4:
+                output("4: Personenverwaltung");
+            case 5:
+                output("5: Über diese Applikation");
+            case 6:
+                output("6: Beenden");
 
-		// put your code here
-		//HI
-		//GitHubIstCursed
-		//urzi
-		//vezzi
-	}
-	public static void MainMenu(String input) {
-
-		switch (input.toLowerCase()) {
-			case "standortverwaltung": Standortverwaltung();
-			case "impf-zeitfenster": Impfzeitfenster();
-			case "terminvergabe": Terminvergabe();
-			case "personenverwaltung": Personenverwaltung();
-			case "Über diese Applikaton":
-		}
+        }
 
 
-	}
+    }
+
+    public static void output(String out) {
+        System.out.println(out);
+    }
 
 }
