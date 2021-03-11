@@ -1,11 +1,24 @@
 package vaccination;
 
 public class Person {
-	private static String[][] person;
+	private static String[][] person = null;
 	
 	
 	//gibt die personID zurück
 	public static int addNewPerson(String firstName, String lastName, int socialSecurityNumber, String street, int ZIP, String City, String Country, String Birthday, int Telephone) {
+		if (person == null) {
+			person = new String[1][10];
+			person[0][0] = firstName + "";
+			person[0][1] =lastName + "";
+			person[0][2] = socialSecurityNumber + "";
+			person[0][3] = street + "";
+			person[0][4] = ZIP + "";
+			person[0][5] = City + "";
+			person[0][6] = Country + "";
+			person[0][7] = Birthday + "";
+			person[0][8] = Telephone + "";
+		}
+		
 		String[][] temp = person;
 		person = null;
 		
@@ -24,7 +37,7 @@ public class Person {
 		person[temp.length][7] = Birthday + "";
 		person[temp.length][8] = Telephone + "";
 		
-		return 0;
+		return person.length -1;
 	}
 	
 	//gibt false zurück, wenn das Löschen nicht erfolgreich war
