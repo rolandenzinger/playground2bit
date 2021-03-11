@@ -11,7 +11,7 @@ public class MainMenu {
 		
 		System.out.println("Hello 2BIT");
 
-		System.out.println("Schaxlmeister");
+		System.out.println("Schaxleister");
 		
 		// put your code here
 
