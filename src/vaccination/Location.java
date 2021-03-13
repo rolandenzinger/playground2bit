@@ -18,6 +18,5 @@ public class Location {
 	}
 	public void listAllLocations() {
 		System.out.println("Baumax Leoben");
-		System.out.println("HTL Leoben");
 	}
 }
