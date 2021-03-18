@@ -1,5 +1,8 @@
 package vaccination;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -12,11 +15,34 @@ public class UserInterface {
         return answer;
     }
 
-    public static String AskForDate() {
+    public static Date AskForDate(String info, String testOnlyDate) {
 
         Scanner sc = new Scanner(System.in);
+        String dateAsString = "";
+
+        if(info.length() > 0) {
+            System.out.println(info);
+        }
+
         System.out.print("Enter date [DD:MM:YY]: ");
-        String date = sc.nextLine();
+
+        if(testOnlyDate.length() > 0) {
+            dateAsString = testOnlyDate;
+        }
+        else {
+            dateAsString = sc.nextLine();
+        }
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd:MM:yy");
+        Date date = null;
+
+        try {
+            date = dateFormat.parse(dateAsString);
+        } catch (ParseException e) {
+            date = null;
+            e.printStackTrace();
+        }
+
         return date;
     }
 
