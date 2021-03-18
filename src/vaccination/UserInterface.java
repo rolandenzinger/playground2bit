@@ -24,12 +24,11 @@ public class UserInterface {
             System.out.println(info);
         }
 
-        System.out.print("Enter date [DD:MM:YY]: ");
-
         if(testOnlyDate.length() > 0) {
             dateAsString = testOnlyDate;
         }
         else {
+            System.out.print("Enter date [DD:MM:YY]: ");
             dateAsString = sc.nextLine();
         }
 
