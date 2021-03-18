@@ -44,17 +44,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainMenu" />
@@ -70,7 +59,8 @@
       <option name="presentableId" value="Default" />
       <updated>1615454759025</updated>
       <workItem from="1615454760480" duration="1637000" />
-      <workItem from="1616065686574" duration="1174000" />
+      <workItem from="1616065686574" duration="1514000" />
+      <workItem from="1616067251628" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="Inhalt2">
       <created>1616066186459</created>
@@ -86,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616066288168</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Komentare löschen">
+      <created>1616067019830</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616067019830</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +93,7 @@
     <MESSAGE value="Inhalt" />
     <MESSAGE value="Inhalt2" />
     <MESSAGE value="HI" />
-    <option name="LAST_COMMIT_MESSAGE" value="HI" />
+    <MESSAGE value="Komentare löschen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Komentare löschen" />
   </component>
 </project>
