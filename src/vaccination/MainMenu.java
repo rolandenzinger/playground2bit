@@ -9,6 +9,7 @@ import java.util.Scanner;
 //Text für "ÜberApplikation" Entwickeln.
 //Testen ob alles Funktioniert
 //Spaß haben XD
+//HI
 
 
 public class MainMenu {
