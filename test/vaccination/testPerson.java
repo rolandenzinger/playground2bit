@@ -13,13 +13,9 @@ class testPerson {
 		assertEquals(3, Person.addNewPerson("Maxi3", "Mustermann", 123456789, "Kastanienweg", 8740, "Weiﬂkirchen", "Austria", "12.12.20012", 6801506));
 	}
 	
-	@Test public void testDeletePerson() {
+	@Test public void testDeletePersons() {
 		assertEquals(true, Person.deletePerson(0));
 		assertEquals(true, Person.deletePerson(1));
-		assertEquals(true, Person.deletePerson(2));
-	}
-	@Test public void testDeletePersonFalse() {
-		assertEquals(false, Person.deletePerson(4));
-	}
-
+		assertEquals(true, Person.deletePerson(1));
+	}	
 }
