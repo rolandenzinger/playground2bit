@@ -47,42 +47,15 @@ private static String[][] person = null;
 	//gibt false zurück, wenn das Löschen nicht erfolgreich war
 	public static boolean deletePerson(int personID) {
 		if (person.length > personID && personID >= 0) {
-			if (personID == 0) {
-				if (personID == person.length - 1) {
-					person = null;
-				}else {
-					String[][] temp = person;
-					person = null;
-					person = new String[temp.length - 1][9];
-					for (int i = 1; i < temp.length - 1;i ++) {
-						person[i] = temp[i];
-					}
-				}
-			}else if(personID == person.length - 1) {
-				String[][] temp = person;
-				person = null;
-				String[][] person = new String[temp.length - 1][9];
-				for (int i = 0; i < temp.length - 1; i ++) {
-					person[i] = temp[i];
-				}
-			}else {
-				String[][] temp = new String[personID + 1][9];
-				for (int i = 0; i < personID; i++) {
-					temp[i] = person[i];
-				}
-				String[][] temp2 = new String[person.length - 1 - personID][9];
-				for (int i = personID + 1; i < person.length; i++) {
-					temp2[i - personID - 1] = person[i];
-				}
-				person = null;
-				person = new String[temp.length - 1 + temp2.length][9];
-				for(int i = 0; i < (temp.length); i++) {
-					person[i] = temp[i];
-				}
-				for(int i = personID; i < person.length; i++) {
-					person[i] = temp2[i - personID];
-				}
-			}
+			person[personID][0] = "";
+			person[personID][1] = "";
+			person[personID][2] = "";
+			person[personID][3] = "";
+			person[personID][4] = "";
+			person[personID][5] = "";
+			person[personID][6] = "";
+			person[personID][7] = "";
+			person[personID][8] = "";
 			return true;
 		}else {
 			return false;
@@ -91,7 +64,6 @@ private static String[][] person = null;
 	
 	//gibt alle Personen in einem Array zurück
 	public static String[][] listAllPersons() {
-		System.out.println(person[0][0]);
 		return person;
 	}
 }
