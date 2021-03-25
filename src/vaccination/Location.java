@@ -29,6 +29,11 @@ public class Location {
 		return locations;
 	}
 	public void listAllLocations() {
-		System.out.println(locations);
+		for(int i = 0; i < locations.length; i++) {
+			for(int o = 0; o < locations[0].length; o++) {
+				System.out.print(locations[i][o] + ", ");
+			}
+			System.out.println("");
+		}
 	}
 }
