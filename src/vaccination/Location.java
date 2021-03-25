@@ -16,6 +16,7 @@ public class Location {
 		locations[LocationID][3] = Integer.toString(TZIP);
 		locations[LocationID][4] = TCity;
 		locations[LocationID][5] = TCOuntry;
+		LocationID++;
 		return locations;
 	}
 
