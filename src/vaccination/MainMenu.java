@@ -95,93 +95,94 @@ public class MainMenu {
 	}
 
 	public static void ImpfZeitfenster() {
-        int userInput = 0;
-        UserInterface.SaySomething("Sie befinden sich im Untermenü 'Impf-Zeitfenster'");
-        UserInterface.SaySomething("Geben Sie (1) ein um ein Freies Impfenster anzulegen.");
-        UserInterface.SaySomething("Geben Sie (2) um einpackage vaccination");
-        try {
-            userInput = Integer.parseInt(sc.nextLine());
-        } catch (NumberFormatException e) {
-            UserInterface.SaySomething("Bitte geben Sie eine Zahl ein.");
-        }
-        switch (userInput) {
-            case 1:
-                UserInterface.SaySomething("*Freies Impf-Zeitfenster angelegt*");
-                break;
-            case 2:
-                UserInterface.SaySomething("*Ungebuchtes Impf-Zeitfenster gelöscht*");
-                break;
-            default:
-                UserInterface.SaySomething("Falsche Nummer");
-                break;
-        }
+		int userInput = 0;
+		UserInterface.SaySomething("Sie befinden sich im Untermenü 'Impf-Zeitfenster'");
+		UserInterface.SaySomething("Geben Sie (1) ein um ein Freies Impfenster anzulegen.");
+		UserInterface.SaySomething("Geben Sie (2) um einpackage vaccination");
+		try {
+			userInput = Integer.parseInt(sc.nextLine());
+		} catch (NumberFormatException e) {
+			UserInterface.SaySomething("Bitte geben Sie eine Zahl ein.");
+		}
+		switch (userInput) {
+			case 1:
+				UserInterface.SaySomething("*Freies Impf-Zeitfenster angelegt*");
+				break;
+			case 2:
+				UserInterface.SaySomething("*Ungebuchtes Impf-Zeitfenster gelöscht*");
+				break;
+			default:
+				UserInterface.SaySomething("Falsche Nummer");
+				break;
+		}
 
-    }
+	}
 
-    public static void Terminvergabe() {
-        int userInput = 0;
-        UserInterface.SaySomething("Sie befinden sich im Untermenü 'Terminvergabe'");
-        UserInterface.SaySomething("Geben Sie (1) um freie Termine für Ihren Standort anzuzeigen.");
-        UserInterface.SaySomething("Geben Sie (2) um freie Termine für ein Datum anzuzeigen.");
-        UserInterface.SaySomething("Geben Sie (3) um freie Termine zu buchen.");
-        UserInterface.SaySomething("Geben Sie (4) um einen Gebuchten Termin zu löschen.");
-        try {
-            userInput = Integer.parseInt(sc.nextLine());
-        } catch (NumberFormatException e) {
-            UserInterface.SaySomething("Bitte geben Sie eine Zahl ein.");
-        }
-        switch (userInput) {
-            case 1:
-                UserInterface.SaySomething("*Termine für Standort*");
-                break;
-            case 2:
-                UserInterface.SaySomething("*Freie Termine für Datum*");
-                break;
-            case 3:
-                UserInterface.SaySomething("*Freier Termin gebucht!*");
-                break;
-            case 4:
-                UserInterface.SaySomething("*Gebuchter Termin gelöscht!");
-                break;
-            default:
-                UserInterface.SaySomething("Falsche Nummer");
-                break;
-        }
+	public static void Terminvergabe() {
+		int userInput = 0;
+		UserInterface.SaySomething("Sie befinden sich im Untermenü 'Terminvergabe'");
+		UserInterface.SaySomething("Geben Sie (1) um freie Termine für Ihren Standort anzuzeigen.");
+		UserInterface.SaySomething("Geben Sie (2) um freie Termine für ein Datum anzuzeigen.");
+		UserInterface.SaySomething("Geben Sie (3) um freie Termine zu buchen.");
+		UserInterface.SaySomething("Geben Sie (4) um einen Gebuchten Termin zu löschen.");
+		try {
+			userInput = Integer.parseInt(sc.nextLine());
+		} catch (NumberFormatException e) {
+			UserInterface.SaySomething("Bitte geben Sie eine Zahl ein.");
+		}
+		switch (userInput) {
+			case 1:
+				UserInterface.SaySomething("*Termine für Standort*");
+				break;
+			case 2:
+				UserInterface.SaySomething("*Freie Termine für Datum*");
+				break;
+			case 3:
+				UserInterface.SaySomething("*Freier Termin gebucht!*");
+				break;
+			case 4:
+				UserInterface.SaySomething("*Gebuchter Termin gelöscht!");
+				break;
+			default:
+				UserInterface.SaySomething("Falsche Nummer");
+				break;
+		}
 
-    }
+	}
 
-    public static void Personenverwaltung() {
-        int userInput = 0;
-        UserInterface.SaySomething("Sie befinden sich im Untermenü 'Personenverwaltung'");
-        UserInterface.SaySomething("Geben Sie (1) um eine neue Person anzulegen.");
-        UserInterface.SaySomething("Geben Sie (2) um eine Person zu löschen.");
-        UserInterface.SaySomething("Geben Sie (3 ein um Alle Personen zu listen)");
+	public static void Personenverwaltung() {
+		int userInput = 0;
+		UserInterface.SaySomething("Sie befinden sich im Untermenü 'Personenverwaltung'");
+		UserInterface.SaySomething("Geben Sie (1) um eine neue Person anzulegen.");
+		UserInterface.SaySomething("Geben Sie (2) um eine Person zu löschen.");
+		UserInterface.SaySomething("Geben Sie (3 ein um Alle Personen zu listen)");
 
-        try {
-            userInput = Integer.parseInt(sc.nextLine());
-        } catch (NumberFormatException e) {
-            UserInterface.SaySomething("Bitte geben Sie eine Zahl ein.");
-        }
+		try {
+			userInput = Integer.parseInt(sc.nextLine());
+		} catch (NumberFormatException e) {
+			UserInterface.SaySomething("Bitte geben Sie eine Zahl ein.");
+		}
 
-        switch (userInput) {
-            case 1:
-                UserInterface.SaySomething("*Person angelegt!!*");
-                break;
-            case 2:
-                UserInterface.SaySomething("*Person gelöscht*");
-                break;
-            case 3:
-                UserInterface.SaySomething("*Alle Personen !!!!!*");
-            default:
-                UserInterface.SaySomething("Falsche Nummer");
-                break;
-        }
+		switch (userInput) {
+			case 1:
+				UserInterface.SaySomething("*Person angelegt!!*");
+				break;
+			case 2:
+				UserInterface.SaySomething("*Person gelöscht*");
+				break;
+			case 3:
+				UserInterface.SaySomething("*Alle Personen !!!!!*");
+			default:
+				UserInterface.SaySomething("Falsche Nummer");
+				break;
+		}
 
-    }
+	}
 
-    public static void Informationen() {
-        UserInterface.SaySomething("Informationen!!!!!!!!!");
-    }
+	public static void Informationen() {
+		System.out.println("Informationen!!!!!!!!!");
+	}
+
 
 }
 
