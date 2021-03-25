@@ -19,16 +19,16 @@ public class MainMenu {
 	public static void main(String[] args) {
 		try {
 			int userInput = 0;
-			System.out.println("Geben Sie (1) für Standortverwalung ein.");
-			System.out.println("Geben Sie (2) ein um auf das Impf-Zeitfenster zuzugreifen.");
-			System.out.println("Geben Sie (3) für Terminvergabe ein.");
-			System.out.println("Geben Sie (4) für Personenverwaltung ein.");
-			System.out.println("Geben Sie (5) um mehr Über diese Applikation zu erfahren.");
-			System.out.println("Geben Sie (6) ein um das Programm zu beenden");
+			UserInterface.SaySomething("Geben Sie (1) für Standortverwalung ein.");
+			UserInterface.SaySomething("Geben Sie (2) ein um auf das Impf-Zeitfenster zuzugreifen.");
+			UserInterface.SaySomething("Geben Sie (3) für Terminvergabe ein.");
+			UserInterface.SaySomething("Geben Sie (4) für Personenverwaltung ein.");
+			UserInterface.SaySomething("Geben Sie (5) um mehr Über diese Applikation zu erfahren.");
+			UserInterface.SaySomething("Geben Sie (6) ein um das Programm zu beenden");
 			userInput = Integer.parseInt(sc.nextLine());
 			MainMenu(userInput);
 		} catch (NumberFormatException e) {
-			System.out.println("Bitte geben Sie eine Zahl ein.");
+			UserInterface.SaySomething("Bitte geben Sie eine Zahl ein.");
 		}
 	}
 
@@ -68,27 +68,27 @@ public class MainMenu {
 
 	public static void Standortverwaltung() {
 		int userInput = 0;
-		System.out.println("Sie befinden sich im Untermenü 'Standortverwaltung'");
-		System.out.println("Geben Sie (1) ein um einen neuen Standort hinzuzufügen");
-		System.out.println("Geben Sie (2) ein um einen Standot zu löschen");
-		System.out.println("Geben Sie (3)  ein um alle bereits vorhanden Standorte zu listen ");
+		UserInterface.SaySomething("Sie befinden sich im Untermenü 'Standortverwaltung'");
+		UserInterface.SaySomething("Geben Sie (1) ein um einen neuen Standort hinzuzufügen");
+		UserInterface.SaySomething("Geben Sie (2) ein um einen Standot zu löschen");
+		UserInterface.SaySomething("Geben Sie (3)  ein um alle bereits vorhanden Standorte zu listen ");
 		try {
 			userInput = Integer.parseInt(sc.nextLine());
 		} catch (NumberFormatException e) {
-			System.out.println("Bitte geben Sie eine Zahl ein.");
+			UserInterface.SaySomething("Bitte geben Sie eine Zahl ein.");
 		}
 		switch (userInput) {
 			case 1:
-				System.out.println("*Standort hinzugefügt*");
+				UserInterface.SaySomething("*Standort hinzugefügt*");
 				break;
 			case 2:
-				System.out.println("*Standort gelöscht*");
+				UserInterface.SaySomething("*Standort gelöscht*");
 				break;
 			case 3:
-				System.out.println("*Standorte!!!!! *");
+				UserInterface.SaySomething("*Standorte!!!!! *");
 				break;
 			default:
-				System.out.println("Falsche Nummer");
+				UserInterface.SaySomething("Falsche Nummer");
 				break;
 		}
 
