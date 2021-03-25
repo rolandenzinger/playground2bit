@@ -2,9 +2,9 @@ package vaccination;
 
 import java.util.Scanner;
 //todo
-//Alles mit ** Gehört eingebunden (Klassen von anderen)
-//Alles System.out.print/println gehören mit der methode "saysomething" von Kopp ausgegeben.
-//Rechtschreibprüfung
+//Alles mit ** Gehört eingebunden (Klassen von anderen)+-
+//Alles System.out.print/println gehören mit der methode "saysomething" von Kopp ausgegeben.+
+//Rechtschreibprüfung+
 //Programm in Schleife setzen, beenden Funktion schreiben und in die Fuktion "Mainmenue" Einbinden
 //Text für "ÜberApplikation" Entwickeln.
 //Testen ob alles Funktioniert
@@ -152,6 +152,19 @@ public class MainMenu {
 
 	public static void Personenverwaltung() {
 		int userInput = 0;
+
+		String fistName = null;
+		String lastName = null;
+		int socialnr = 0;
+		String street = null;
+		int ZIP = 0;
+		String City = null;
+		String Country = null;
+		String Birthday = null;
+		int telephone = 0;
+
+		int ID = 0;
+
 		UserInterface.SaySomething("Sie befinden sich im Untermenü 'Personenverwaltung'");
 		UserInterface.SaySomething("Geben Sie (1) um eine neue Person anzulegen.");
 		UserInterface.SaySomething("Geben Sie (2) um eine Person zu löschen.");
@@ -165,10 +178,31 @@ public class MainMenu {
 
 		switch (userInput) {
 			case 1:
-				Person.addNewPerson("H","J",123, "h",123, "h", "j", "1.3.",123);
+				System.out.println("Please enter first Name");
+				fistName = sc.nextLine();
+				System.out.println("Please enter last Name");
+				lastName = sc.nextLine();
+				System.out.println("Please enter Social Security number");
+				socialnr = Integer.parseInt(sc.nextLine());
+				System.out.println("Please enter street");
+				street = sc.nextLine();
+				System.out.println("Please enter ZIP");
+				ZIP = Integer.parseInt(sc.nextLine());
+				System.out.println("Please enter City");
+				City = sc.nextLine();
+				System.out.println("Please enter Country");
+				Country = sc.nextLine();
+				System.out.println("Please enter Birthday");
+				Birthday =sc.nextLine();
+				System.out.println("Please enter telephone number");
+				telephone = Integer.parseInt(sc.nextLine());
+				Person.addNewPerson(fistName,lastName,socialnr, street,ZIP, City, Country, Birthday,telephone);
+
 				break;
 			case 2:
-				Person.deletePerson(123);
+				System.out.println("Please enter ID");
+				ID = Integer.parseInt(sc.nextLine());
+				Person.deletePerson(ID);
 				break;
 			case 3:
 				Person.listAllPersons();
