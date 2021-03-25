@@ -6,7 +6,7 @@ public class Person {
 
 	private static String[][] person = null;
 
-	public static void insertValues() {
+	public static boolean insertValues() {
 		
 		Scanner sc = new Scanner(System.in);
 
@@ -40,10 +40,11 @@ public class Person {
 		int telephone = Integer.parseInt(sc.nextLine());
 		
 		addNewPerson(firstName, lastName, socialSecurityNumber, street, zIP, city, country, birthday, telephone);
-		
+		return true;
 		}
 		catch(Exception ex) {
 			System.out.println("Unerwarteter Fehler");
+			return false;
 		}
 	}
 
