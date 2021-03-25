@@ -180,7 +180,7 @@ public class MainMenu {
 	}
 
 	public static void Informationen() {
-		System.out.println("Informationen!!!!!!!!!");
+		UserInterface.SaySomething("Informationen!!!!!!!!!");
 	}
 
 
