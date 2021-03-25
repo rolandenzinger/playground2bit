@@ -7,7 +7,6 @@ public class Person {
 	private static String[][] person = null;
 
 	public static boolean insertValues() {
-		
 		Scanner sc = new Scanner(System.in);
 
 		try {
@@ -48,7 +47,6 @@ public class Person {
 		}
 	}
 
-	// gibt die personID zurück
 	public static int addNewPerson(String firstName, String lastName, int socialSecurityNumber, String street, int ZIP,
 			String City, String Country, String Birthday, int Telephone) {
 
@@ -68,7 +66,6 @@ public class Person {
 
 			String[][] temp = person;
 			person = null;
-
 			person = new String[temp.length + 1][9];
 			for (int i = 0; i < temp.length; i++) {
 				person[i] = temp[i];
@@ -88,7 +85,6 @@ public class Person {
 		}
 	}
 
-	// gibt false zurück, wenn das Löschen nicht erfolgreich war
 	public static boolean deletePerson(int personID) {
 		if (person.length > personID && personID >= 0) {
 			person[personID][0] = "";
@@ -106,7 +102,6 @@ public class Person {
 		}
 	}
 
-	// gibt alle Personen in einem Array zurück
 	public static String[][] listAllPersons() {
 		return person;
 	}
