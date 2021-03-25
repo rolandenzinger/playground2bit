@@ -165,7 +165,7 @@ public class timeslot {
 			return 0;
 }
 	
-
+	//Alle UNschedules Slots
 	public static int getAllUnscheduledSlotsForDate(int slotDate) {
 		for(slotDate = 0; slotDate < timeslot.length; slotDate++) {
 			if(timeslot[slotDate][3] != null) {
@@ -180,3 +180,5 @@ public class timeslot {
 			return 0;
 }
 }
+
+
