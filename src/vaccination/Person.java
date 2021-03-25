@@ -1,17 +1,60 @@
 package vaccination;
 
+import java.util.Scanner;
+
 public class Person {
 
-private static String[][] person = null;
+	private static String[][] person = null;
 
-	
-	//gibt die personID zurück
-	public static int addNewPerson(String firstName, String lastName, int socialSecurityNumber, String street, int ZIP, String City, String Country, String Birthday, int Telephone) {
+	public static void insertValues() {
+		
+		Scanner sc = new Scanner(System.in);
+
+		try {
+		
+		System.out.println("Geben Sie ihren Vornamen ein: ");
+		String firstName = sc.nextLine();
+		
+		System.out.println("Geben Sie ihren Nachname ein: ");
+		String lastName = sc.nextLine();
+		
+		System.out.println("Geben Sie ihre Sozialsversicherungsnummer ein: ");
+		int socialSecurityNumber = Integer.parseInt(sc.nextLine());
+		
+		System.out.println("Geben Sie ihre Stra�e ein: ");
+		String street = sc.nextLine();
+		
+		System.out.println("Geben Sie ihre Postleitzahl ein: ");
+		int zIP = Integer.parseInt(sc.nextLine());
+		
+		System.out.println("Geben Sie ihre Stadt ein: ");
+		String city = sc.nextLine();
+		
+		System.out.println("Geben Sie ihr Land ein: ");
+		String country = sc.nextLine();
+		
+		System.out.println("Geben Sie ihren Gebrutstag ein: ");
+		String birthday = sc.nextLine();
+		
+		System.out.println("Geben Sie ihre Telefonnummer ein: ");
+		int telephone = Integer.parseInt(sc.nextLine());
+		
+		addNewPerson(firstName, lastName, socialSecurityNumber, street, zIP, city, country, birthday, telephone);
+		
+		}
+		catch(Exception ex) {
+			System.out.println("Unerwarteter Fehler");
+		}
+	}
+
+	// gibt die personID zurück
+	public static int addNewPerson(String firstName, String lastName, int socialSecurityNumber, String street, int ZIP,
+			String City, String Country, String Birthday, int Telephone) {
 
 		if (person == null) {
 			person = new String[1][9];
 			person[0][0] = firstName + "";
-			person[0][1] =lastName + "";
+			person[0][1] = lastName + "";
 			person[0][2] = socialSecurityNumber + "";
 			person[0][3] = street + "";
 			person[0][4] = ZIP + "";
@@ -20,18 +63,18 @@ private static String[][] person = null;
 			person[0][7] = Birthday + "";
 			person[0][8] = Telephone + "";
 			return 0;
-		}else {
-			
+		} else {
+
 			String[][] temp = person;
 			person = null;
-			
+
 			person = new String[temp.length + 1][9];
-			for(int i = 0; i < temp.length; i++) {
+			for (int i = 0; i < temp.length; i++) {
 				person[i] = temp[i];
 			}
-			
+
 			person[temp.length][0] = firstName + "";
-			person[temp.length][1] =lastName + "";
+			person[temp.length][1] = lastName + "";
 			person[temp.length][2] = socialSecurityNumber + "";
 			person[temp.length][3] = street + "";
 			person[temp.length][4] = ZIP + "";
@@ -39,12 +82,12 @@ private static String[][] person = null;
 			person[temp.length][6] = Country + "";
 			person[temp.length][7] = Birthday + "";
 			person[temp.length][8] = Telephone + "";
-			
-			return person.length -1;
+
+			return person.length - 1;
 		}
 	}
-	
-	//gibt false zurück, wenn das Löschen nicht erfolgreich war
+
+	// gibt false zurück, wenn das Löschen nicht erfolgreich war
 	public static boolean deletePerson(int personID) {
 		if (person.length > personID && personID >= 0) {
 			person[personID][0] = "";
@@ -57,12 +100,12 @@ private static String[][] person = null;
 			person[personID][7] = "";
 			person[personID][8] = "";
 			return true;
-		}else {
+		} else {
 			return false;
 		}
 	}
-	
-	//gibt alle Personen in einem Array zurück
+
+	// gibt alle Personen in einem Array zurück
 	public static String[][] listAllPersons() {
 		return person;
 	}
