@@ -19,8 +19,14 @@ public class Location {
 		return locations;
 	}
 
-	public Boolean deleteLocation(int TLocationID, String TName, String TStreet, int TZIP, String TCity, String TCOuntry) {
-		return true;
+	public String[][] deleteLocation() {
+		locations[0][0] = "";
+		locations[0][1] = "";
+		locations[0][2] = "";
+		locations[0][3] = "";
+		locations[0][4] = "";
+		locations[0][5] = "";
+		return locations;
 	}
 	public void listAllLocations() {
 		System.out.println(locations);
