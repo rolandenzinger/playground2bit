@@ -1,31 +1,31 @@
 package vaccination;
 
 public class Location {
-	public int LocationID;
+	public int LocationID = 0;
 	public String Name;
 	public String Street;
 	public int ZIP;
 	public String City;
 	public String Country;
-	public String[][] locations = new String[1][6];
+	public String[][] locations = new String[9999][6];
 
-	public String[][] addLocation(int TLocationID, String TName, String TStreet, int TZIP, String TCity, String TCOuntry) {
-		locations[0][0] = Integer.toString(TLocationID);
-		locations[0][1] = TName;
-		locations[0][2] = TStreet;
-		locations[0][3] = Integer.toString(TZIP);
-		locations[0][4] = TCity;
-		locations[0][5] = TCOuntry;
+	public String[][] addLocation(String TName, String TStreet, int TZIP, String TCity, String TCOuntry) {
+		locations[LocationID][0] = Integer.toString(LocationID + 1);
+		locations[LocationID][1] = TName;
+		locations[LocationID][2] = TStreet;
+		locations[LocationID][3] = Integer.toString(TZIP);
+		locations[LocationID][4] = TCity;
+		locations[LocationID][5] = TCOuntry;
 		return locations;
 	}
 
-	public String[][] deleteLocation() {
-		locations[0][0] = "";
-		locations[0][1] = "";
-		locations[0][2] = "";
-		locations[0][3] = "";
-		locations[0][4] = "";
-		locations[0][5] = "";
+	public String[][] deleteLocation(int TLocationID) {
+		locations[TLocationID][0] = "";
+		locations[TLocationID][1] = "";
+		locations[TLocationID][2] = "";
+		locations[TLocationID][3] = "";
+		locations[TLocationID][4] = "";
+		locations[TLocationID][5] = "";
 		return locations;
 	}
 	public void listAllLocations() {
