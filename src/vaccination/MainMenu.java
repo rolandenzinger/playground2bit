@@ -79,16 +79,16 @@ public class MainMenu {
 		}
 		switch (userInput) {
 			case 1:
-				UserInterface.SaySomething("*Standort hinzugefügt*");
+				System.out.println("*Standort hinzugefügt*");
 				break;
 			case 2:
-				UserInterface.SaySomething("*Standort gelöscht*");
+				System.out.println("*Standort gelöscht*");
 				break;
 			case 3:
-				UserInterface.SaySomething("*Standorte!!!!! *");
+				System.out.println("*Standorte!!!!! *");
 				break;
 			default:
-				UserInterface.SaySomething("Falsche Nummer");
+				System.out.println("Falsche Nummer");
 				break;
 		}
 
@@ -106,13 +106,13 @@ public class MainMenu {
 		}
 		switch (userInput) {
 			case 1:
-				UserInterface.SaySomething("*Freies Impf-Zeitfenster angelegt*");
+				System.out.println("*Freies Impf-Zeitfenster angelegt*");
 				break;
 			case 2:
-				UserInterface.SaySomething("*Ungebuchtes Impf-Zeitfenster gelöscht*");
+				System.out.println("*Ungebuchtes Impf-Zeitfenster gelöscht*");
 				break;
 			default:
-				UserInterface.SaySomething("Falsche Nummer");
+				System.out.println("Falsche Nummer");
 				break;
 		}
 
@@ -132,16 +132,16 @@ public class MainMenu {
 		}
 		switch (userInput) {
 			case 1:
-				UserInterface.SaySomething("*Termine für Standort*");
+				timeslot.getAllUnscheduledSlotsForStation();
 				break;
 			case 2:
-				UserInterface.SaySomething("*Freie Termine für Datum*");
+				timeslot.getAllUnscheduledSlotsForDate();
 				break;
 			case 3:
-				UserInterface.SaySomething("*Freier Termin gebucht!*");
+				timeslot.addScheduledSlotforPerson();
 				break;
 			case 4:
-				UserInterface.SaySomething("*Gebuchter Termin gelöscht!");
+				timeslot.deleteScheduledSlotforPerson();
 				break;
 			default:
 				UserInterface.SaySomething("Falsche Nummer");
@@ -165,13 +165,13 @@ public class MainMenu {
 
 		switch (userInput) {
 			case 1:
-				UserInterface.SaySomething("*Person angelegt!!*");
+				Person.addNewPerson("H","J",123, "h",123, "h", "j", "1.3.",123);
 				break;
 			case 2:
-				UserInterface.SaySomething("*Person gelöscht*");
+				Person.deletePerson(123);
 				break;
 			case 3:
-				UserInterface.SaySomething("*Alle Personen !!!!!*");
+				Person.listAllPersons();
 			default:
 				UserInterface.SaySomething("Falsche Nummer");
 				break;
