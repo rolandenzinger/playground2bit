@@ -132,16 +132,16 @@ public class MainMenu {
         }
         switch (userInput) {
             case 1:
-                timeslot.getAllUnscheduledSlotsForStation();
+               // timeslot.getAllUnscheduledSlotsForStation();
                 break;
             case 2:
-                timeslot.getAllUnscheduledSlotsForDate();
+               // timeslot.getAllUnscheduledSlotsForDate();
                 break;
             case 3:
-                timeslot.addScheduledSlotforPerson();
+               // timeslot.addScheduledSlotforPerson();
                 break;
             case 4:
-                timeslot.deleteScheduledSlotforPerson();
+               // timeslot.deleteScheduledSlotforPerson();
                 break;
             default:
                 UserInterface.SaySomething("Falsche Nummer");
@@ -214,7 +214,7 @@ public class MainMenu {
     }
 
     public static void Informationen() {
-        UserInterface.SaySomething("Über dieses Programm: Sie habe nhier ein Programm zur Impfverwaltung mit den unterkategorien");
+        UserInterface.SaySomething("Über dieses Programm: Sie haben hier ein Programm zur Impfverwaltung mit den Unterkategorien");
     }
 
 
